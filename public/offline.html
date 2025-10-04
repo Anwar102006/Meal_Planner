@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Meal Planner</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+            margin: 0;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .offline-container {
+            background: white;
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 20px rgba(100, 150, 200, 0.15);
+            max-width: 500px;
+        }
+        .offline-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: #a7c7e7;
+        }
+        h1 {
+            color: #234567;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        .retry-btn {
+            background: #a7c7e7;
+            color: #234567;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .retry-btn:hover {
+            background: #7fb3e6;
+        }
+        .features {
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .features h3 {
+            color: #234567;
+            margin-bottom: 1rem;
+        }
+        .features ul {
+            color: #666;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">📱</div>
+        <h1>You're Offline</h1>
+        <p>Don't worry! You can still access your saved meal plans and grocery lists while offline.</p>
+        
+        <button class="retry-btn" onclick="window.location.reload()">
+            Try Again
+        </button>
+        
+        <div class="features">
+            <h3>Available Offline:</h3>
+            <ul>
+                <li>View your saved meal plans</li>
+                <li>Check your grocery lists</li>
+                <li>Browse cached recipes</li>
+                <li>Make changes (will sync when online)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // Check if we're back online
+        window.addEventListener('online', () => {
+            window.location.reload();
+        });
+        
+        // Show online status
+        if (navigator.onLine) {
+            window.location.reload();
+        }
+    </script>
+</body>
+</html> 

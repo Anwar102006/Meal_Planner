@@ -1,0 +1,86 @@
+.recipe-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(100, 150, 200, 0.10);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 320px;
+  margin: 0 auto;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(100, 150, 200, 0.18);
+}
+
+.recipe-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.recipe-content {
+  padding: 1rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.recipe-title {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  color: #234567;
+}
+
+.recipe-ingredients {
+  list-style: disc inside;
+  color: #4a5568;
+  font-size: 0.98rem;
+  margin: 0 0 1rem 0;
+  padding: 0 0 0 1rem;
+}
+
+.add-to-plan-btn {
+  background: #a7c7e7;
+  color: #234567;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background 0.2s;
+}
+.add-to-plan-btn:hover {
+  background: #7fb3e6;
+}
+
+.recipe-nutrition {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.nutrition-item {
+  background: #f0f8ff;
+  color: #234567;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+@media (max-width: 500px) {
+  .recipe-card {
+    max-width: 100%;
+  }
+  .recipe-image {
+    height: 140px;
+  }
+} 
