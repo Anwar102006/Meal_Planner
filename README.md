@@ -81,27 +81,6 @@ A modern, responsive meal planning application built with React, Vite, and Expre
 npm run build
 ```
 
-## 🌐 Deployment
-
-### Option 1: Netlify (Recommended)
-1. Push your code to GitHub
-2. Go to [netlify.com](https://netlify.com)
-3. Import your repository
-4. Set build command: `npm run build`
-5. Set publish directory: `dist`
-
-### Option 2: Vercel
-1. Install Vercel CLI: `npm install -g vercel`
-2. Run: `vercel --prod`
-3. Follow the prompts
-
-### Option 3: Quick Deploy Script
-```bash
-chmod +x deploy.sh
-./deploy.sh
-```
-
-For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
 ## 🏗️ Project Structure
 
